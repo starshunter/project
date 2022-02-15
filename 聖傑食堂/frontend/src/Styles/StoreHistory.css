@@ -1,0 +1,136 @@
+/* body{
+    overflow:hidden
+}
+body::-webkit-scrollbar {
+    display: none;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+
+.Container {
+    height: 90%;
+    width: 100%;
+}
+
+.View {
+   width: 100%; 
+}
+
+.cases-View-History h2{
+    width: 100%;
+    font-weight: bold;
+    font-size: 10vh;
+    margin-top: 4vh;
+    text-align: center;
+    position: relative;
+    left: 0vh;
+}
+
+
+.cases-View {
+    border-style: solid;
+    border-width: 0px 0.5px 0px 0px;
+    border-color: black;
+    color: white;
+    flex: 1;
+    border-color: rgb(231, 195, 154);
+    border-width: 0px;
+}
+::-webkit-scrollbar
+{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+    background:linear-gradient(transparent, rgb(231, 195, 154));
+    border-radius: 5px;
+}
+::-webkit-scrollbar
+{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+    background:linear-gradient(transparent, rgb(231, 195, 154));
+    border-radius: 5px;
+}
+
+.cases-View li{
+    border-color: rgb(231, 195, 154);
+    cursor: pointer;
+}
+
+
+.cases-View li{
+    border-color: rgb(231, 195, 154);
+    cursor: pointer;
+}
+
+
+.cases-View h3{
+    color: black;
+}
+
+
+
+.browseCase ul {
+    display : inline-block;
+    height : 100%;
+    width : 100%;
+}
+
+.browseCase ul .clicked {
+    background-color: rgb(243, 213, 178);
+}
+
+.browseCase li {
+    border: none;
+    box-shadow: 0 10px 16px 0 rgb(0,0,0,0.4);
+    display : inline-block;
+    margin: 7vh;
+    height: 70vh;
+    width: 70vh;
+}
+
+li h3 {
+    margin: 0px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 36px;
+    /* line-height:100px */
+}
+
+li p {
+    margin: 0px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 24px;
+    line-height:6vh;
+}
+
+.browseCase img{
+    width: 30%;
+    height: 30%;
+    border-radius: 5vh;
+    border: 0.3vh solid black;
+
+}
+
+.browseCase button{
+    margin-top: 5vh;
+    margin-left: 5vh;
+    width: 25vh;
+    height: 10vh;
+    background-color: white;
+    border-radius: 5vh;
+    border: 0.3vh solid black;
+
+}
+
+.browseCase li:not(.clicked):hover {
+    border: 0.7vh solid black;
+}
+
+.detail-View {
+    flex: 1.5;
+}

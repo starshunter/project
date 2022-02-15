@@ -1,0 +1,285 @@
+* {
+    font-family: 微軟正黑體;
+}
+
+body {
+    background-color: white;
+}
+
+.login {
+    width: 100%;
+}
+
+.login input {
+    font-size: 12px;
+}
+.user_login_page{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+.store_login_page{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+#username_user,
+#password_user,
+#fullname_user,
+#comfirm_password_user,
+#username2_user,
+#password2_user,
+#phoneNo_user,
+#email_user {
+    width: 200px;
+    height: 20px;
+    margin: 10px;
+    color: #1d1b8d;
+}
+
+#username_store,
+#password_store,
+#fullname_store,
+#comfirm_password_store,
+#username2_store,
+#password2_store,
+#phoneNo_store,
+#email_store,
+#address_store {
+    width: 200px;
+    height: 20px;
+    margin: 10px;
+    color: #df5334;
+}
+
+h6 {
+    margin: 20px;
+    color: #a3a2a3;
+    text-align: center;
+}
+
+h6:hover {
+    color: black;
+    text-align: center;
+}
+
+#container1-user,
+#container2-user {
+    /* margin: 50px; */
+    padding: 10px;
+    width: 60vh;
+    height: 55vh;
+    background-color: white;
+    border-radius: 5px;
+    border-top: 10px solid #a0d9da;
+    box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+
+    /*內容置中*/
+    display: flex;
+    justify-content: center;
+
+    /*定位對齊*/
+    position: relative;
+    margin: auto;
+    top: 100px;
+    text-align: center;
+}
+
+#container1-store,
+#container2-store {
+    /* margin: 50px; */
+    padding: 10px;
+    width: 60vh;
+    height: 55vh;
+    background-color: white;
+    border-radius: 5px;
+    border-top: 10px solid #ff6e6e;
+    box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+
+    /*內容置中*/
+    display: flex;
+    justify-content: center;
+
+    /*定位對齊*/
+    position: relative;
+    margin: auto;
+    top: 100px;
+    text-align: center;
+}
+
+.system_name {
+    /*定位對齊*/
+    position: relative;
+    margin: auto;
+    top: 100px;
+    text-align: center;
+}
+
+.submit-user {
+    color: white;
+    background: #a0d9da;
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.submit-store {
+    color: white;
+    background: #ff6e6e;
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.submit:hover {
+    background: #db6937;
+}
+
+.user_login_page,
+.store_login_page {
+    float: right;
+}
+
+.user_signup_page {
+    margin: 0 auto;
+}
+
+.store_signup_page {
+    margin: 0 auto;
+}
+
+.user_login_color,
+.user_signup_color {
+    width: 400px;
+    height: 20px;
+    margin: 10px;
+    color: #1d1b8d;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.store_login_color,
+.store_signup_color {
+    width: 400px;
+    height: 20px;
+    margin: 10px;
+    color: #df5334;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#container2-user,
+#container2-store {
+    visibility: hidden; /*剛開始消失*/
+    display: none;
+    position: absolute;
+    top: 20%;
+    right: 60%;
+    height: 500px;
+    text-align: center;
+}
+
+.login input {
+    padding: 5px;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+}
+
+/* Navbar的css */
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    bottom: 270px;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-item img {
+    width:auto;
+    height:100%;
+    /* max-height:100%; */
+    /* width: 100vw;
+    height: auto; */
+    /* object-fit: cover; */
+}
+
+.navbar {
+    background-color: bisque;
+}
+
+.navbar-light .navbar-brand {
+    color: #ffd900;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* .navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+    color: #ffd700;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffd700;
+}
+
+.navbar-toggler {
+    background: #ffd700;
+} */
+
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-link {
+    padding: 0.2rem 1rem;
+}
+
+/* .nav-link.active,
+.nav-link:focus {
+    color: #ffd700;
+} */
+
+.navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: 0.3;
+}
+
+/* .navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffd700;
+} */

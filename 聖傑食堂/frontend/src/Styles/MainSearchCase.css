@@ -1,0 +1,254 @@
+.Container.searchCase {
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+}
+
+.navItem a{
+    font-size: 10vh;
+}
+
+.View.map-View{
+    height: 100%;
+    width: 69.5%;
+    display:inline-block;
+}
+.View.cases-View-MainSearch{
+    height: 100%;
+    width: 30%;
+    display:inline-block;
+    position: relative;
+    /* top: -84vh;
+    left: 73vh; */
+    overflow-x:hidden;
+}
+
+@media (max-width:1200px){
+    .View.map-View{
+        width: 55.5%;
+    }
+    .View.cases-View-MainSearch{
+        width: 44%;
+    }
+    
+}
+@media (max-width:900px){
+    .View.map-View{
+        width: 25%;
+    }
+    .View.cases-View-MainSearch{
+        width: 74.5%;
+    }
+    
+}
+
+.store-title{
+    /* margin-top: 5vh; */
+    height: 0%;
+    width: 30%;
+    display:inline-block;
+    position: relative;
+    top: -86vh;
+    
+    /* margin-left: 10vh    */
+    
+    /* width: 100%; */
+}
+
+.View.cases-View-MainSearch li img{
+    width: 25vh;
+    height: 25vh;
+}
+
+
+h2{
+    position: relative;
+    left: 20vh;
+}
+
+.modal-paragragh{
+    text-align:center;
+    font-weight:bold;
+    font-size: 3vh;
+}
+
+
+.ReactModal__Content--after-open h2{
+    text-align: left;
+}
+
+
+.ReactModal__Content h2{
+    /* overflow: hidden; */
+    width: 70%;
+    /* font-size: 3px; */
+    /* height: 70%; */
+}
+
+.ReactModal__Content--after-open label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+}
+
+.ReactModal__Content--after-open input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+}
+
+.ReactModal__Content--after-open button {
+    display: flex;
+    justify-content: center;
+    width: 20vh;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 2vh;
+    font-size: 24px;
+    color: black;
+    background-color: white;
+    border-radius: 3vh;
+}
+
+.cases-View-MainSearch li{
+    display: inline-block;
+    width: 61.5vh;
+    height: 65vh;
+    list-style-type: none;
+}
+
+/* .title-name .map-button{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+} */
+
+
+.store-title p, button{
+    /* left: 300px; */
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+} 
+.store-title p{
+    /* text-align: left; */
+    /* margin-left: 10vh; */
+    font-size: 6vh;
+    font-weight: bold;
+}
+
+.photo{
+    /* left: 3vh; */
+    /* margin-top: 3vh; */
+    border: 3px solid black;
+    width: 35vh;
+    height: 35vh;
+    /* background-color: rgb(252, 252, 252); */
+    /* padding: 30px; */
+    margin: 2.8vh;
+    float: left;
+    
+    /* font-size: 3.5vh; */
+}
+
+.searchCase {
+    /* display: flex; */
+    flex-direction: row;
+}
+
+.map-View {
+    flex: 2;
+}
+
+.cases-View {
+    flex: 1;
+}
+
+.searchCase ul {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    /* overflow: scroll; */
+}
+
+/* .searchCase ul .clicked {
+    background-color: rgb(194, 248, 255);
+} */
+
+.searchCase li {
+    /* list-style: none; */
+    /* height: 150px; */
+    /* border: 3px solid black; */
+    box-shadow: 0 10px 16px 0 rgb(0,0,0,0.4);
+    background-color: white;
+    /* margin-left: 20vh; */
+    /* float: left; */
+    /* position:relative; */
+}
+
+.searchCase li h3 {
+    margin: 0px;
+    font-size: 32px;
+    padding: 0px;
+    line-height: initial;
+}
+
+.searchCase li p {
+    margin: 0px;
+    font-size: 24px;
+    color: black;
+    padding: 0px;
+    line-height: initial;
+}
+
+/* li:first-child {
+    border-width: 0.5px 0px;
+} */
+
+.searchCase li:hover {
+    cursor: pointer;
+    border: 0.4vh solid black;
+    /* background-color: rgb(245, 245, 245); */
+    /* border-width: 1px 0px; */
+    /* top: -5px; */
+}
+
+.map-button:hover {
+    cursor: pointer;
+    background-color: #478ac9;
+    /* border-width: 1px 0px; */
+    /* top: -5px; */
+}
+
+.leftover-button:hover {
+    cursor: pointer;
+    background-color: red;
+    
+    /* border-width: 1px 0px; */
+    /* top: -5px; */
+}
+
+
+.allStore-button:hover {
+    cursor: pointer;
+    background-color: #eb7947;
+    /* border-width: 1px 0px; */
+    /* top: -5px; */
+}
+
+@media (max-width:1024px){
+    .ReactModal__Content h2{
+        /* overflow: hidden; */
+        /* visibility: visible; */
+        width: 70%;
+        font-size: 12px;
+        /* height: 70%; */
+    }
+}

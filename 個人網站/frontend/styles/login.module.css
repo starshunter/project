@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    align-items: center;
+    width: 100%;
+}
+
+.input {
+    width: 80%;
+    font-size: 20px;
+    padding: 5px 10px;
+    /* background-color: blue; */
+}
+
+.label {
+    width: 20%;
+    height: 5vh;
+    text-align: center;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBlock {
+    display: flex;
+    flex-direction: row;
+    margin: 5vh 0vh;
+    width: 100%;
+}
+
+.button {
+    width: 40%;
+    height: 4vh;
+}

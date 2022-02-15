@@ -1,0 +1,5 @@
+pymongo==3.11.3
+Flask==1.1.2
+dnspython==1.16.0
+apscheduler==2.1.2
+# pip install -r requirements.txt

@@ -1,0 +1,232 @@
+@import '~antd/dist/antd.css';
+/* login */
+/* .ant-input {
+  border-color: green;
+  border: none
+}
+
+.ant-input-password {
+  border: none; 
+  border-color: green;
+} */
+
+.App {
+  background-color: #282c34;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+}
+
+.App-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: snow;
+  font-size: 3em;
+  margin: auto;
+}
+
+.App-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: snow;
+  margin: auto;
+}
+
+.ant-btn-primary {
+  color: snow;
+}
+
+.login {
+  background-color: green;
+  border-color: green;
+}
+
+.login:hover {
+  background-color: limegreen;
+  border-color: limegreen;
+}
+
+.login:focus {
+  background-color: limegreen;
+  border-color: limegreen;
+}
+
+.signup {
+  background-color: orange;
+  border-color: orange;
+}
+
+.signup:hover {
+  background-color: gold;
+  border-color: gold;
+}
+
+.signup:focus {
+  background-color: gold;
+  border-color: gold;
+}
+
+/*  main page */
+.ant-menu-submenu-open {
+  color: limegreen;
+}
+
+.ant-menu-submenu-inline {
+  color: black;
+}
+
+.ant-menu-submenu-title:hover {
+  color: limegreen;
+}
+
+.ant-menu-submenu-title-selected {
+  color: limegreen;
+}
+
+.ant-menu-item:hover {
+  color: limegreen;
+}
+
+.ant-menu-item-active {
+  color: limegreen;
+}
+
+.ant-menu-item-selected{
+  color: limegreen;
+}
+
+.ant-input-search-button {
+  background-color: green;
+  border-color: green;
+}
+
+.ant-input-search-button:hover{
+  background-color: limegreen;
+  border-color: limegreen;
+}
+
+.ant-input-search-button:focus{
+  background-color: limegreen;
+  border-color: limegreen;
+}
+.main-all{
+    background-color: #282c34;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-menu{
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    margin-top: 0%;
+    margin: auto;
+}
+
+.main-content{
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+}
+
+
+.menu-style{
+    top: 0%;
+    position: fixed;
+    width: 15vw;
+    height: 100vh;
+}
+
+.header_bar{
+    top: 0;
+    height: 12vh;
+    width: 85vw;
+    background-color:#282c34;
+}
+
+/* Input 的search按鈕 */
+.ant-btn-primary { 
+    color: snow;
+}
+
+.search_text:hover {
+    background-color: limegreen;
+    border-color: limegreen;
+}
+
+.search_text:focus {
+    background-color: limegreen;
+    border-color: limegreen;
+}
+  
+.scroll_page {
+    width: 60vw;
+    margin: 12vh auto;
+}
+
+.settings {
+  background-color: snow;
+  border-radius: 1vh;
+  padding: 2vh;
+}
+
+.ant-pagination-item-ellipsis {
+  background-color: #FFF
+}
+
+.question-block {
+    margin: 2vh auto;
+    background-color: snow;
+    border-radius: 1vh;
+    padding: 2vh;
+}
+
+.question-title {
+    width: 100%;
+}
+
+.question-description {
+  position: relative;
+  min-height: 20px;
+}
+
+.comments {
+    border-style: solid;
+    border-color: gray #FFF #FFF #FFF;
+    border-width: 1px;
+    padding: 5px;
+}
+.showMore {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-width: 0;
+}
+.numOfComment {
+    border-width: 0;
+}
+
+.comment {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray #FFF #FFF #FFF;
+    width:auto; 
+    padding: 5px 8px 0px 8px;
+    display:inline-block !important; 
+    display:inline;
+    position: relative;
+}

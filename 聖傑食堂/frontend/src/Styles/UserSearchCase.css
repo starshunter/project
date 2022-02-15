@@ -1,0 +1,287 @@
+.Container.searchCase {
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+}
+
+.View.map-View{
+    height: 100%;
+    width: 69.5%;
+    display:inline-block;
+}
+.View.cases-View-search{
+    height: 100%;
+    width: 30%;
+    display:inline-block;
+    position: relative;
+    top: -84vh;
+    left: 73vh;
+    overflow:auto;
+}
+.store-title{
+    /* margin-top: 5vh; */
+    height: 0%;
+    width: 30%;
+    display:inline-block;
+    position: relative;
+    top: -86vh;
+    
+    /* margin-left: 10vh    */
+    
+    /* width: 100%; */
+}
+
+.View.cases-View-search li img{
+    width: 25vh;
+    height: 25vh;
+}
+
+
+h2{
+    position: relative;
+    left: 20vh;
+}
+
+
+.ReactModal__Content--after-open h2{
+    text-align: left;
+}
+
+
+.ReactModal__Content h2{
+    /* overflow: hidden; */
+    width: 70%;
+    /* font-size: 3px; */
+    /* height: 70%; */
+}
+
+.ReactModal__Content--after-open label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+}
+
+.ReactModal__Content--after-open input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+}
+
+.ReactModal__Content--after-open button {
+    display: flex;
+    justify-content: center;
+    width: 20vh;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 2vh;
+    font-size: 24px;
+    color: black;
+    background-color: white;
+    border-radius: 3vh;
+}
+.ReactModal__Content--after-open p {
+    text-align: center;
+    font-size: 4vh;
+    margin-top: 1vh;
+}
+
+
+/* .cases-View-search{
+    display: inline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5vh;
+    min-height: 100vh;
+} */
+
+/* .cases-View-search ul{
+    white-space:nowrap;
+    text-align: center;
+    padding-left:0;
+} */
+
+.cases-View-search li{
+    display: inline-block;
+    width: 61.5vh;
+    height: 65vh;
+    /* padding: 30px; */
+    /* margin: 1vh; */
+    list-style-type: none;
+
+    /* float: left; */
+    
+    /* margin-left: 20vh; */
+    /* border: 3px solid black; */
+    /* background-color: rgb(252, 252, 252); */
+    
+}
+
+/* .title-name .map-button{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+} */
+
+
+.store-title p, button{
+    /* left: 300px; */
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+} 
+.store-title p{
+    /* text-align: left; */
+    /* margin-left: 10vh; */
+    font-size: 6vh;
+    font-weight: bold;
+}
+/* .store-title .map-button{
+    margin-left: 20vh;
+    width: 30vh;
+    height: 10vh;
+    border: none;
+    background-color:#b3dd9b;
+    border-radius: 35px;
+    font-size: 22px;
+    font-weight: bold; 
+    color: black;
+}
+.store-title .leftover-button{
+    margin-left: 15vh;
+    width: 25vh;
+    height: 7vh;
+    border: solid red 2px;
+    background-color:white;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.store-title .allStore-button{
+    margin-left: 2vh;
+    width: 20vh;
+    height: 7vh;
+    border: solid #eb7947 2px;
+    background-color:white;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    
+} */
+
+.photo{
+    /* left: 3vh; */
+    /* margin-top: 3vh; */
+    border: 3px solid black;
+    width: 35vh;
+    height: 35vh;
+    /* background-color: rgb(252, 252, 252); */
+    /* padding: 30px; */
+    margin: 2.8vh;
+    float: left;
+    
+    /* font-size: 3.5vh; */
+}
+
+.searchCase {
+    /* display: flex; */
+    flex-direction: row;
+}
+
+.map-View {
+    flex: 2;
+}
+
+.cases-View {
+    flex: 1;
+}
+
+.searchCase ul {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    /* overflow: scroll; */
+}
+
+/* .searchCase ul .clicked {
+    background-color: rgb(194, 248, 255);
+} */
+
+.searchCase li {
+    /* list-style: none; */
+    /* height: 150px; */
+    /* border: 3px solid black; */
+    box-shadow: 0 10px 16px 0 rgb(0,0,0,0.4);
+    /* margin-left: 20vh; */
+    /* float: left; */
+    /* position:relative; */
+}
+
+.searchCase li h3 {
+    margin: 0px;
+    font-size: 32px;
+    padding: 0px;
+    line-height: initial;
+}
+
+.searchCase li p {
+    margin: 0px;
+    font-size: 24px;
+    color: black;
+    padding: 0px;
+    line-height: initial;
+}
+
+/* li:first-child {
+    border-width: 0.5px 0px;
+} */
+
+.searchCase li:hover {
+    cursor: pointer;
+    border: 0.4vh solid black;
+    /* background-color: rgb(245, 245, 245); */
+    /* border-width: 1px 0px; */
+    /* top: -5px; */
+}
+
+.map-button:hover {
+    cursor: pointer;
+    background-color: #478ac9;
+    /* border-width: 1px 0px; */
+    /* top: -5px; */
+}
+
+.leftover-button:hover {
+    cursor: pointer;
+    background-color: red;
+    
+    /* border-width: 1px 0px; */
+    /* top: -5px; */
+}
+
+
+.allStore-button:hover {
+    cursor: pointer;
+    background-color: #eb7947;
+    /* border-width: 1px 0px; */
+    /* top: -5px; */
+}
+
+@media (max-width:1024px){
+    .ReactModal__Content h2{
+        /* overflow: hidden; */
+        /* visibility: visible; */
+        width: 70%;
+        font-size: 12px;
+        /* height: 70%; */
+    }
+}

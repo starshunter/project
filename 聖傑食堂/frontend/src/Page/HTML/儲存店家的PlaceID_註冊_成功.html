@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place ID Geocoder</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .controls {
+        background-color: #fff;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        height: 50px;
+        margin-left: 17px;
+        margin-top: 10px;
+        outline: none;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      .controls:focus {
+        border-color: #4d90fe;
+      }
+
+      .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+    </style>
+    <script>
+      // This sample requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script
+      // src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+      let map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: {lat: 25.015976, lng: 121.5295972},
+          zoom: 13,
+        });
+        const input = document.getElementById("pac-input");
+        const autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo("bounds", map);
+        // Specify just the place data fields that you need.
+        autocomplete.setFields([
+          "place_id",
+          "geometry",
+          "name",
+          "formatted_address",
+        ]);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        const infowindow = new google.maps.InfoWindow();
+        const infowindowContent = document.getElementById("infowindow-content");
+        infowindow.setContent(infowindowContent);
+        const geocoder = new google.maps.Geocoder();
+        const marker = new google.maps.Marker({ map: map });
+        marker.addListener("click", () => {
+          infowindow.open(map, marker);
+        });
+        autocomplete.addListener("place_changed", () => {
+          infowindow.close();
+          const place = autocomplete.getPlace();
+
+          if (!place.place_id) {
+            return;
+          }
+          geocoder.geocode({ placeId: place.place_id }, (results, status) => {
+            if (status !== "OK" && results) {
+              window.alert("Geocoder failed due to: " + status);
+              return;
+            }
+            map.setZoom(17);
+            map.setCenter(results[0].geometry.location);
+            // Set the position of the marker using the place ID and location.
+            marker.setPlace({
+              placeId: place.place_id,
+              location: results[0].geometry.location,
+            });
+            marker.setVisible(true);
+            infowindowContent.children["place-name"].textContent = place.name;
+            infowindowContent.children["place-id"].textContent = place.place_id;
+            infowindowContent.children["place-address"].textContent = results[0].formatted_address;
+            infowindowContent.children["place-latlng"].textContent = results[0].geometry.location;
+            document.getElementById("info_map_confirmed").children["place-name"].textContent = place.name;
+            document.getElementById("info_map_confirmed").children["place-address"].textContent = results[0].formatted_address;
+            
+            infowindow.open(map, marker);
+          });
+        });
+
+        document.getElementById("info_map_confirmed").style.display = "none";
+
+      }
+
+      function confirm_Map(){
+        document.getElementById("map").style.display = "none";
+        document.getElementById("info_map_confirmed").style.display = "";
+      }
+
+      function cancel_confirm_Map(){
+        document.getElementById("map").style.display = "";
+        document.getElementById("info_map_confirmed").style.display = "none";
+        document.getElementById("pac-input").value = "";
+        map.setZoom(13);
+
+      }
+    </script>
+  </head>
+  <body>
+    <div style="display: none">
+      <input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Enter a location"
+      />
+    </div>
+    <div id="map"></div>
+    <div id="infowindow-content">
+      <strong>【 </strong><span id="place-name" class="title"></span><strong>】 </strong><br />
+      <strong>Place ID：</strong><span id="place-id"></span><br />
+      <strong>Address：</strong><span id="place-address"></span><br />
+      <strong>(Lat, Lng)：</strong><span id="place-latlng"></span><br />
+      <!-- 把place-name、place-id、place-address傳回後端資料庫儲存-->
+      <!-- 點選「確認店家位置 ✓」後，讓地圖的畫面鎖定-->
+      <button onclick="confirm_Map()">確認店家位置 ✓</button>
+    </div>
+    <div id="info_map_confirmed">
+      <strong>您選定的Google Map店家名稱：</strong><span id="place-name"></span><br />
+      <strong>您選定的Google Map店家地址：</strong><span id="place-address"></span><br />
+      <button onclick="cancel_confirm_Map()">取消並重新選擇店家位置</button>
+    </div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpvN91mgQHeKaaQHjfKw1prGDzzdA7cO0&callback=initMap&libraries=places&v=weekly"
+      async
+    ></script>
+  </body>
+</html>

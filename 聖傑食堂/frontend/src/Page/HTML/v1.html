@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      *{
+        font-family:微軟正黑體;  
+      }
+
+      body{
+        background-color: white;
+      }
+
+      #username_user, #password_user,#fullname_user, #comfirm_password_user, #username2_user, #password2_user, #phoneNo_user, #email_user{
+        width: 200px;
+        height: 20px;
+        margin: 10px;
+        color: #1d1b8d;
+      }
+
+      #username_store, #password_store,#fullname_store, #comfirm_password_store,#username2_store, #password2_store, #phoneNo_store, #email_store, #address_store{
+        width: 200px;
+        height: 20px;
+        margin: 10px;
+        color: #df5334;
+      }
+
+      h6{
+        margin: 20px;
+        color: #a3a2a3;
+        text-align:center; 
+      }
+
+      h6:hover{
+        color: black;
+        text-align:center; 
+      }
+
+      #container1-user, #container2-user{
+        /* margin: 50px; */
+        padding: 10px;
+        width: 450px;
+        height: 400px;
+        background-color: white;
+        border-radius: 5px;
+        border-top: 10px solid #a0d9da;
+        box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+
+        /*內容置中*/
+        display: flex;
+        justify-content: center;
+
+        /*定位對齊*/
+        position:relative;   
+        margin: auto;
+        top: 100px;
+        text-align:center;  
+      }
+
+      #container1-store, #container2-store{
+        /* //margin: 50px; */
+        padding: 10px;
+        width: 450px;
+        height: 400px;
+        background-color: white;
+        border-radius: 5px;
+        border-top: 10px solid #FF6E6E;
+        box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+
+        /*內容置中*/
+        display: flex;
+        justify-content: center;
+
+        /*定位對齊*/
+        position:relative;   
+        margin: auto;
+        top: 100px;
+        text-align:center;  
+      }
+
+      .system_name{
+        /*定位對齊*/
+        position:relative;   
+        margin: auto;
+        top: 100px;
+        text-align:center; 
+      }
+
+      .submit-user{
+        color: white;  
+        background: #a0d9da;
+        width: 200px;
+        height: 30px;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 0px;
+      }
+
+      .submit-store{
+        color: white;  
+        background: #FF6E6E;
+        width: 200px;
+        height: 30px;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 0px;
+      }
+
+      .submit:hover{
+        background: #db6937;
+      }
+
+      .user_login_page, .store_login_page{
+        float:right;
+      }
+
+      .user_signup_page{
+        margin: 0 auto;
+      }
+
+      .store_signup_page{
+        margin: 0 auto;
+      }
+
+      .user_login_color, .user_signup_color{
+        width: 400px;
+        height: 20px;
+        margin: 10px;
+        color: #1d1b8d;
+        margin-bottom: 30px;
+        text-align:center; 
+      }
+
+      .store_login_color, .store_signup_color{
+        width: 400px;
+        height: 20px;
+        margin: 10px;
+        color: #df5334;
+        margin-bottom: 30px;
+        text-align:center; 
+      }
+
+      #container2-user, #container2-store{
+        visibility: hidden;   /*剛開始消失*/
+        display: none;
+        height: 500px;
+        text-align:center;
+      }
+
+      input{
+        padding: 5px;
+        border: none; 
+        border:solid 1px #ccc;
+        border-radius: 5px;
+      }
+
+      /* Navbar的css */
+      .carousel-item {
+        height: 100vh;
+        min-height: 300px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .carousel-caption {
+        bottom: 270px;
+      }
+
+      .carousel-caption h5 {
+        font-size: 45px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 25px;
+      }
+
+      .carousel-caption p {
+        width: 75%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.9;
+      }
+
+      .navbar-light .navbar-brand {
+        color: #ffd700;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+        color: #ffd700;
+      }
+
+      .navbar-light .navbar-nav .nav-link {
+        color: #ffd700;
+      }
+
+      .navbar-toggler {
+        background: #ffd700;
+      }
+
+      .navbar-nav {
+        text-align: center;
+      }
+
+      .nav-link {
+        padding: .2rem 1rem;
+      }
+
+      .nav-link.active,.nav-link:focus{
+        color: #ffd700;
+      }
+
+      .navbar-toggler {
+        padding: 1px 5px;
+        font-size: 18px;
+        line-height: 0.3;
+      }
+
+      .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+        color: #ffd700;
+      }
+    </style>
+    <script>
+      // 使用者註冊帳號
+      function show_hide_user() {
+        var login_user = document.getElementById("container1-user");
+        var signup_user = document.getElementById("container2-user");
+        var login_store = document.getElementById("container1-store");
+        var signup_store = document.getElementById("container2-store");
+      
+        // 註冊切換到登入
+        if (login_user.style.display === "none") {
+            login_user.style.display = "block";  //login出現
+            login_store.style.display = "block";  //login出現
+            document.getElementById("username_user").value="";
+            document.getElementById("password_user").value="";
+            signup_user.style.display = "none";  //signup消失
+            signup_store.style.display = "none";  //signup消失
+        } 
+
+        // 登入切換到註冊
+        else {
+            login_user.style.display = "none";   //login消失
+            login_store.style.display = "none";   //login消失
+            signup_user.style.display = "block"; //signup出現
+            signup_user.style.visibility="visible";
+         
+            document.getElementById("fullname_user").value="";
+            document.getElementById("username2_user").value="";
+            document.getElementById("password2_user").value="";
+            document.getElementById("comfirm_password_user").value="";
+        }
+      }
+
+      // 店家註冊帳號
+      function show_hide_store() {
+        var login_user = document.getElementById("container1-user");
+        var signup_user = document.getElementById("container2-user");
+        var login_store = document.getElementById("container1-store");
+        var signup_store = document.getElementById("container2-store");
+      
+        // 註冊切換到登入
+        if (login_store.style.display === "none") {
+            login_user.style.display = "block";  //login出現
+            login_store.style.display = "block";  //login出現
+            document.getElementById("username_store").value="";
+            document.getElementById("password_store").value="";
+            signup_user.style.display = "none";  //signup消失
+            signup_store.style.display = "none";  //signup消失
+        } 
+
+        // 登入切換到註冊
+        else {
+            login_user.style.display = "none";   //login消失
+            login_store.style.display = "none";   //login消失
+            signup_store.style.display = "block"; //signup出現
+            signup_store.style.visibility="visible";
+         
+            document.getElementById("fullname_store").value="";
+            document.getElementById("username2_store").value="";
+            document.getElementById("password2_store").value="";
+            document.getElementById("comfirm_password_store").value="";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">剩杰食堂</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="system_name">
+          <h2>蝦米碗糕 <br> 剩杰食堂老師居然很愛</h2>
+        </div>
+
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://visualsonline.cancer.gov/retrieve.cfm?imageid=2397&dpi=300&fileformat=jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://visualsonline.cancer.gov/retrieve.cfm?imageid=2397&dpi=300&fileformat=jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://visualsonline.cancer.gov/retrieve.cfm?imageid=2397&dpi=300&fileformat=jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+      
+
+        <div class="user_login_page">
+          <div id="container1-user">
+
+            <div class="login">  
+              
+              <h3 class="user_login_color">一般使用者 登入 Login</h3>
+
+              <form action="用戶管理.php">
+                <input type="text" id="username_user" name="username" placeholder="信箱帳號" required>
+                <div class="tab"></div>
+                <input type="text" id="password_user" name="password" placeholder="密碼" required>
+                <div class="tab"></div>
+                <input type="submit" value="登入" class="submit-user" onclick="">
+              </form>  
+
+              <h6 onclick="show_hide_user()">註冊帳號 <br> 來成為一般使用者吧❤</h6>
+              
+            </div><!-- login end-->
+          </div><!-- container1 end-->
+        </div><!-- login_page end-->
+
+
+        <div class="store_login_page">
+          <div id="container1-store">
+
+            <div class="login">  
+              
+              <h3 class="store_login_color">合作店家 登入 Login</h3>
+
+              <form action="用戶管理.php">
+                <input type="text" id="username_store" name="username" placeholder="信箱帳號" required>
+                <div class="tab"></div>
+                <input type="text" id="password_store" name="password" placeholder="密碼" required>
+                <div class="tab"></div>
+                <input type="submit" value="登入" class="submit-store" onclick="">
+              </form>  
+
+              <h6 onclick="show_hide_store()">註冊帳號 <br> 來成為合作店家吧❤</h6>
+              
+            </div><!-- login end-->
+          </div><!-- container1 end-->
+        </div><!-- login_page end-->
+
+        <!-- 一般使用者註冊-->
+        <div class="user_signup_page">
+          <div id="container2-user">
+
+            <div class="signup">  
+              
+              <h3 class="user_signup_color">註冊成為一般使用者</h3>
+
+              <form action="用戶管理.php">
+                <input type="text" id="fullname_user" name="fullname" placeholder="使用者全名" required>
+                <div class="tab"></div>
+                <input type="text" id="username2_user" name="username" placeholder="帳號" required>
+                <div class="tab"></div>
+                <input type="text" id="password2_user" name="password" placeholder="密碼" required>
+                <div class="tab"></div>
+                <input type="text" id="comfirm_password_user" name="comfirm_password" placeholder="確認密碼" required>
+                <div class="tab"></div>
+                <input type="tel" id="phoneNo_user" name="phone_number" placeholder="手機號碼" required>
+                <div class="tab"></div>
+                <input type="email" id="email_user" name="email" placeholder="信箱帳號" required>
+                <div class="tab"></div>
+                <input type="submit" value="註冊" class="submit-user">
+              </form>  
+
+              <h6 onclick="show_hide_user()">登入 <u>一般使用者/合作店家</u> 帳號</h6>
+              
+            </div><!-- signup end-->
+          </div><!-- container2 end-->
+        </div><!-- signup_page end--> 
+
+        <!-- 合作店家註冊-->
+        <div class="store_signup_page">
+          <div id="container2-store">
+
+            <div class="signup">  
+              
+              <h3 class="store_signup_color">註冊成為合作店家</h3>
+
+              <form action="用戶管理.php">
+                <input type="text" id="fullname_store" name="fullname" placeholder="店家全名" required>
+                <div class="tab"></div>
+                <input type="text" id="username2_store" name="username" placeholder="帳號" required>
+                <div class="tab"></div>
+                <input type="text" id="password2_store" name="password" placeholder="密碼" required>
+                <div class="tab"></div>
+                <input type="text" id="comfirm_password_store" name="comfirm_password" placeholder="確認密碼" required>
+                <div class="tab"></div>
+                <input type="text" id="address_store" name="address" placeholder="店家地址" required>
+                <div class="tab"></div>
+                <input type="tel" id="phoneNo_store" name="phone_number" placeholder="手機號碼" required>
+                <div class="tab"></div>
+                <input type="email" id="email_store" name="email" placeholder="信箱帳號" required>
+                <div class="tab"></div>            
+                <input type="submit" value="註冊" class="submit-store">
+              </form>  
+
+              <h6 onclick="show_hide_store()">登入 <u>一般使用者/合作店家</u> 帳號</h6>
+              
+            </div><!-- signup end-->
+          </div><!-- container2 end-->
+        </div><!-- signup_page end-->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

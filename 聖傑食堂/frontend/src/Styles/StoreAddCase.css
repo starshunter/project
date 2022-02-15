@@ -1,0 +1,162 @@
+.Container {
+    height: 100%;
+    width: 100%;
+}
+
+.addCase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.addCase h1 {
+    margin-top: 3%;
+}
+
+.addCase .formContainer {
+    /* background-color: pink; */
+    width: 80%;
+}
+
+.addCase form {
+    width: 100%;
+    /* background-color: green; */
+}
+
+.formCaseItem {
+    margin: 30px 0px;
+}
+
+.formCaseItem input[type="text"],
+.formCaseItem input[type="number"],
+.formCaseItem input[type="time"] {
+    width: 40%;
+    font-size: 4vh;
+    padding: 1.2vh 1.5vh;
+    border: none;
+    border-bottom: solid 2px rgb(210, 210, 210);
+    float:left;
+    /* margin: 0vh 25vh 10vh 0vh; */
+    /* margin-left: 10vh; */
+    /* margin-right: 10vh; */
+    margin-bottom: 10vh;
+    text-align: center;
+}
+
+.formCaseItem input[type="file"] {
+    /* display: none; */
+    /* border-bottom: solid 2px rgb(210, 210, 210); */
+    width: 40%;
+    font-size: 24px;
+    padding: 10px 10px;
+    border: none;
+    float:left;
+}
+.formCaseItem img {
+    /* border-bottom: solid 2px rgb(210, 210, 210); */
+    display: none;
+    width: 40%;
+    font-size: 24px;
+    padding: 10px 10px;
+    border: none;
+    float:left;
+    text-align: right;
+}
+
+
+.formCaseItem input[type="text"]:focus,
+.formCaseItem input[type="number"]:focus {
+    outline: none;
+    border-bottom: solid 2px rgb(255, 190, 190);
+    animation-name: inputFocus;
+    animation-duration: 0.3s;
+}
+
+.formCaseItem input::-webkit-outer-spin-button,
+.formCaseItem input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.formCaseItem label {
+    width: 40%;
+    font-size: 4vh;
+    font-weight: bold;
+    /* color: rgb(100, 100, 100); */
+    margin: 0vh 0vh 10vh 0vh;
+    float:left;
+}
+
+/* .formCaseItem label:first-child {
+    margin: 0px 30px 0px 0px;
+} */
+
+.formCaseItem div {
+    margin-top: 50px;
+}
+
+.formCaseItem div {
+    margin-top: 50px;
+}
+
+.addCase button,
+.addCase input[type="submit"] {
+    /* width: 15vh;
+    height: 50px;
+    margin: 20px;
+    background-color: white;
+    border: solid 1px rgb(210, 210, 210); */
+    width: 25%;
+    font-size: 24px;
+    padding: 10px 10px;
+    border: 0.3vh solid black;
+    border-radius: 2.5vh;
+    float:left;
+    text-align: center;
+    /* margin-left: -20vh; */
+    margin-top: 5vh;
+    background-color: white;
+}
+
+.addCase button:hover,
+.addCase input[type="submit"]:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.addCase button:active,
+.addCase input[type="submit"]:active {
+    background-color: rgb(231, 231, 231);
+}
+
+.addCase button:focus,
+.addCase input[type="submit"]:focus {
+    outline: none;
+}
+
+.addCase .errMsg.success {
+    color: green;
+}
+
+.addCase .errMsg.failed {
+    color: red;
+}
+
+@keyframes inputFocus {
+    from {
+        border-bottom-color: rgb(210, 210, 210);
+    }
+    to {
+        border-bottom-color: rgb(255, 190, 190);
+    }
+}
+
+@media (max-width:1080px) {
+    /* .formCaseItem label {
+        width: 30%;
+        font-size: 3vh;
+        font-weight: bold;
+        margin: 0vh 0vh 10vh 25vh;
+        float:left;
+    }     */
+}
